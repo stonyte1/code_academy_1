@@ -28,3 +28,5 @@ elif parinkimas == 'f':
     print(f'Temperatura Farenheito: {atsakymas}')
 
 print('Veikia')
+
+print("Petras cia buvo")
