@@ -30,3 +30,5 @@ elif parinkimas == 'f':
 print('Veikia')
 
 print("Petras cia buvo")
+
+print('Karolis')
