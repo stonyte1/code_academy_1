@@ -26,3 +26,5 @@ if parinkimas == 'c':
 elif parinkimas == 'f':
     atsakymas = (float(temperatura) * (9/5)) + 32
     print(f'Temperatura Farenheito: {atsakymas}')
+
+print('Veikia')
