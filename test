@@ -1,0 +1,4 @@
+ugis_cm = input("iveskite savo ugi: ")
+ugis_m = int(ugis_cm) / 100
+print(f"Jūsų ūgis yra {ugis_cm} cm arba {ugis_m:.2f} m.")
+
