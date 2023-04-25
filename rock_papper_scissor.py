@@ -1,8 +1,9 @@
 import random
 
-print('ROCK PAPPER SCISSOR')
-# Player and computer choose their move
-players_move = input('Choose your move Rock(r), Papper(p), Scissor(s):')
+print('ROCK PAPPER SCISSORS')
+
+# Player and computer chooses their moves
+players_move = input('Choose your move Rock(r), Papper(p), Scissors(s): ')
 computer_choice = random.randint(1, 3)
 
 if computer_choice == 1:

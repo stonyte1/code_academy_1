@@ -1,34 +1,33 @@
-# vartotojo_vardas = input('Iveskite savo varda:')
-# vartotojo_amzius = input('Iveskite savo amziu:')
+class Workers:
+    def __init__(self, name, surname, salary):
+        self.name = name
+        self.surname = surname
+        self.salary = salary
+    
+    def info(self):
+        print(f'Worker {self.name}, surname {self.surname}, salary: {self.salary}')
 
-# vartotojo_amzius100 = 100 - int(vartotojo_amzius)
+class Administrator(Workers):
+    def __init__(self, name, surname, salary):
+        super().__init__(name, surname, salary)
 
-# print("Jusu vardas {}, jums sueis 100 metu po {} metu.".format(vartotojo_vardas, vartotojo_amzius100))
+class Director(Workers):
+    def __init__(self, name, surname, salary, bonus):
+        super().__init__(name, surname, salary)
+        self.bonus = bonus
+        self.salary += self.bonus
+    
+    def info(self):
+        super().info() 
+        print(f'With bonus, witch {self.bonus}')
 
-# vartotojo_ugis = input('Iveskite ugi (cm):')
-# vartotojo_ugism = int(vartotojo_ugis) / 100
+worker1 = Workers('Jhon', 'Walker', 2000)
+worker2 = Workers('James', 'Lenster', 2000)
+worker3 = Administrator('Paul', 'Wales', 2500)
+director = Director('Chris', 'Simpsons', 4000, 1000)
 
-# print('Ugis (cm): {}/n Ugis (m): {}'.format(vartotojo_ugis, vartotojo_ugism))
+workers = [worker1, worker2, worker3, director]
 
-# vartotojo_atlyginimas = input('Iveskite atlyginima:')
-# menesinis_mokescio_atskaitymas = (int(vartotojo_atlyginimas) * 21) / 100
-# menesinis_atlyginimas = int(vartotojo_atlyginimas) - menesinis_mokescio_atskaitymas
-
-
-# print(f'Menesinis talyginimas po mokesciu: {menesinis_atlyginimas:.0f}')
-
-parinkimas = input('Jei norite temperatura keisti i Celsijus rasykite c, jei i Farenheitus rasykite f:')
-temperatura = input('Iveskite temperatura, kuria norite konvertuoti:')
-
-if parinkimas == 'c':
-    atsakymas = (float(temperatura) - 32) * (5/9)
-    print(f'Temperatura Celsijum: {atsakymas}')
-elif parinkimas == 'f':
-    atsakymas = (float(temperatura) * (9/5)) + 32
-    print(f'Temperatura Farenheito: {atsakymas}')
-
-print('Veikia')
-
-print("Petras cia buvo")
-
-print('Karolis')
+for worker in workers:
+    worker.info()
+        
